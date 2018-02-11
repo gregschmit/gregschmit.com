@@ -8,7 +8,6 @@ Location: Chicago, USA
 Name: Tina Mailhot-Roberge for somicro/somacro - http://veodesign.com/2011/en/11/08/somacro-27-free-big-and-simple-social-media-icons/
 
 /* SITE */
-Last update: 2017/06/30 
+Last update: 2018/02/10 
 Standards: HTML5, CSS3
-Components: python flask, apache
 Software: vi, atom
