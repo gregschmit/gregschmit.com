@@ -1,0 +1,8 @@
+from .crypt import decrypt
+
+SECRET_KEY = decrypt(
+    "gAAAAABmS_DqAdL7_c7Gtoe0BcHzawa3YCzOG9J1QqYfFTprQpb51K5bFOeo123oWOmuX6FsD0k3C14pMtlADGDmv2hHQKMw4rNxfClmnIbHajb8JUlA5crKdlNQnV3GWmlgFAVCXVWUzU9yqxqwRTCB74eaCF72vw=="
+)
+DB_PASSWORD = decrypt(
+    "gAAAAABmS_Ei-or8M7Qk39j1R-Mp9NqfyAmczHBlKHRzktEH4oGcQimvsSmmVJW5mIqu2d31scEorl1Ly58JdK4VkLQDfq4bhGpHPfSYOxkSKKcA9v6K0QZXn-d6DpCjpRuhT98r7USP"
+)

@@ -1,0 +1,7 @@
+{
+  "name": "app",
+  "private": true,
+  "devDependencies": {
+    "prettier": "2.8.4"
+  }
+}

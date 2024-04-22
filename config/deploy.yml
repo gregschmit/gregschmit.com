@@ -1,0 +1,30 @@
+service: gregschmit
+
+image: ghcr.io/gregschmit/gregschmit.com
+labels:
+  org.opencontainers.image.source: https://github.com/gregschmit/gregschmit.com
+builder:
+  multiarch: false
+
+servers:
+  web:
+    hosts:
+      - app0.schmit.net
+      # - app1.schmit.net
+    labels:
+      traefik.http.routers.gregschmit.rule: Host(`gregschmit.com`) || HostRegexp(`^.+\.gregschmit\.com$`) || Query(`_route_to`, `gns`)
+
+ssh:
+  proxy: deploy@home.schmit.net
+
+registry:
+  server: ghcr.io
+  username: gregschmit
+  password:
+    - GITHUB_TOKEN
+
+env:
+  clear:
+    DJANGO_ENV: production
+  secret:
+    - PRODUCTION_KEY
