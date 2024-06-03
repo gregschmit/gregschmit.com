@@ -10,7 +10,7 @@ servers:
   web:
     hosts:
       - app0.schmit.net
-      # - app1.schmit.net
+      - app1.schmit.net
     labels:
       traefik.http.routers.gregschmit.rule: Host(`gregschmit.com`) || HostRegexp(`^.+\.gregschmit\.com$`) || Query(`_route_to`, `gns`)
 
