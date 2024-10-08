@@ -28,12 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 DEBUG = ENV == "development"
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    ".schmit.net",
-    ".gregschmit.com",
-]
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     "daphne",
