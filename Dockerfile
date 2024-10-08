@@ -1,5 +1,4 @@
 FROM python:3.12.3-bookworm as base
-LABEL org.opencontainers.image.source=https://github.com/gregschmit/gregschmit.com
 WORKDIR /app
 COPY pyproject.toml poetry.lock ./
 RUN pip install poetry
@@ -20,5 +19,5 @@ COPY . .
 RUN ./manage.py collectstatic
 RUN rm -rf .git
 
-EXPOSE 3000
-CMD ["daphne", "-b", "0.0.0.0", "-p", "3000", "gregschmit.asgi:application"]
+EXPOSE 8000
+CMD ["daphne", "-b", "0.0.0.0", "-p", "8000", "gregschmit.asgi:application"]

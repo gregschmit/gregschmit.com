@@ -1,18 +1,19 @@
 service: gregschmit
-
 image: ghcr.io/gregschmit/gregschmit.com
-labels:
-  org.opencontainers.image.source: https://github.com/gregschmit/gregschmit.com
 builder:
-  multiarch: false
+  arch: amd64
 
 servers:
   web:
-    hosts:
-      - app0.schmit.net
-      - app1.schmit.net
-    labels:
-      traefik.http.routers.gregschmit.rule: Host(`gregschmit.com`) || HostRegexp(`^.+\.gregschmit\.com$`) || Query(`_route_to`, `gns`)
+    - app1.schmit.net
+  # job:
+  #   hosts:
+  #     - 192.168.0.1
+  #   cmd: bin/jobs
+
+proxy:
+  host: gregschmit.com
+  app_port: 8000
 
 ssh:
   proxy: deploy@home.schmit.net

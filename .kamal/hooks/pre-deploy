@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo "Applying migrations."
-kamal app exec --version=$KAMAL_VERSION --primary "./manage.py migrate"
