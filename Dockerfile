@@ -1,4 +1,4 @@
-FROM python:3.12.3-bookworm as base
+FROM python:3.12.3-bookworm AS base
 WORKDIR /app
 COPY pyproject.toml poetry.lock ./
 RUN pip install poetry
@@ -6,7 +6,7 @@ RUN poetry config virtualenvs.create false
 RUN poetry install
 
 # Ruby environment is just for Kamal.
-FROM ruby:3.2.2-bookworm as ruby
+FROM ruby:3.2.2-bookworm AS ruby
 ENV BUNDLE_PATH="/usr/local/bundle"
 COPY .ruby-version Gemfile Gemfile.lock ./
 RUN bundle install
