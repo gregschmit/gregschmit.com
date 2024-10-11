@@ -83,6 +83,7 @@ if ENV == "production":
             "PORT": "5432",
             "USER": "root",
             "PASSWORD": DB_PASSWORD,  # type: ignore
+            "OPTIONS": {"sslmode": "require"},
         }
     }
 else:
