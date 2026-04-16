@@ -5,7 +5,7 @@ builder:
 
 servers:
   web:
-    - app1.schmit.net
+    - app0.schmit.net
   # job:
   #   hosts:
   #     - 192.168.0.1
